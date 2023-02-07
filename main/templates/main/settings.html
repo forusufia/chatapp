@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_style %}
+<link rel="stylesheet" href="{% static 'main/css/settings.css' %}">
+{% endblock %}
+
+{% block header_title %}設定{% endblock %}
+
+{% block content %}
+<div class="settings">
+    <div class="buttons">
+        <a href="{% url 'username_change' %}" class="button">ユーザー名変更</a>
+        <a href="{% url 'email_change' %}" class="button">メールアドレス変更</a>
+    </div>
+</div>
+{% endblock %}
